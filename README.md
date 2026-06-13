@@ -150,7 +150,7 @@ microk8s enable metallb:10.64.140.43-10.64.140.49
 microk8s kubectl get svc 
 
 # SSH to tunnel to your machine (do this outside the vm)
-ssh -L 8080:$FLASK_APP_SERVICE_IP:80 $VM_USER@localhost -p 8822
+ssh -L 8080:$CLUSTER_IP:80 $VM_USER@localhost -p 8822
 # Example:ssh -L 8080:10.152.183.44:80 dr2dp@localhost -p 8822
 
 # Access Through a Web Browser
